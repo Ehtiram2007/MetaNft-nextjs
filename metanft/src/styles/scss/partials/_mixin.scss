@@ -1,0 +1,80 @@
+@mixin Flex(
+    $j_content:null,
+    $a_items:null,
+    $gap:null,
+    $f_wrap:null,
+    $f_direction:null
+){
+    display: flex;
+    justify-content: $j_content;
+    align-items: $a_items;
+    flex-wrap: $f_wrap;
+    gap: $gap;
+    flex-direction: $f_direction;
+}
+@mixin Text(
+    $back_ground:null,
+    $color:null,
+    $display:null,
+    $f_size:null,
+    $f_weight:null,
+    $let_spacing:null,
+    $text_ali:null,
+    $b_radius:null,
+    $t_decoration:null,
+    $padding:null,
+    $mar_bottom:null,
+    $text_transfo:null,
+    $mar_left:null,
+    $l_hei:null,
+    $width:null,
+    $height:null,
+    $pad_bottom:null,
+    $mar_right:null,
+    $mar_top:null,
+    $pad_top:null,
+    $pad_left:null,
+    $pad_right:null
+){
+    background: $back_ground;
+    color: $color;
+    display: $display;
+    font-size: $f_size;
+    font-weight: $f_weight;
+    letter-spacing: $let_spacing;
+    text-align: $text_ali;
+    border-radius: $b_radius;
+    text-decoration: $t_decoration;
+    padding: $padding;
+    margin-bottom: $mar_bottom;
+    text-transform: $text_transfo;
+    margin-left: $mar_left;
+    line-height: $l_hei;
+    width: $width;
+    height: $height;
+    padding-bottom: $pad_bottom;
+    margin-right: $mar_right;
+    margin-top: $mar_top;
+    padding-top: $pad_top;
+    padding-left: $pad_left;
+    padding-right: $pad_right;
+}
+@mixin Position(
+$position:null,
+$top:null,
+$left:null,
+$right:null,
+$bottom:null,
+$z_index:null,
+$opacity:null,
+$visibility:null,
+){
+    position: $position;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    z-index: $z_index;
+    opacity: $opacity;
+    visibility: $visibility;
+}

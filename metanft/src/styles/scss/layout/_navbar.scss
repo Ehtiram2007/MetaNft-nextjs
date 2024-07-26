@@ -1,0 +1,151 @@
+#head {
+  padding-top: 15px;
+  position: relative;
+  .container {
+    max-width: 1300px;
+    .nav-flex {
+      @include Flex($j_content:space-between,$a_items:center);
+      .logo {
+        img {
+          width: 195px;
+        }
+      }
+      .menu {
+        @media (max-width: 1024px) {
+          display: none;
+        }
+        .list-menu {
+          @include Flex(30px);
+          li {
+            position: relative;
+            a {
+              font-family: "Chakra Petch", sans-serif;
+              @include Text($color:$white_color,$f_size:16px,$f_weight:700,$text_transfo:uppercase,$display:block,$l_hei:24px,$t_decoration:none,$pad_bottom:20px,$pad_top:30px,$pad_right:21px);
+            }
+            &:hover {
+              .nav_hover {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(20px);
+              }
+            }
+            .nav_hover {
+              transform: translateY(30px);
+              padding-left: 0;
+              width: 200px;
+              transition: all 0.3s linear;
+              @include Position($position:absolute,$left:0,$top:60%,$opacity:0,$visibility:hidden);
+              background-color: $white_color;
+              li {
+                padding-top: 5px;
+                padding-left: 10px;
+                a {
+                  @include Text($pad_top:10px,$pad_right:0,$pad_bottom:0,$color:$dark_color2);
+                }
+              }
+            }
+          }
+        }
+      }
+      .log {
+        .header-btn {
+          @media (max-width:500px) {
+            display: none;
+          }
+          font-family: "Chakra Petch", sans-serif;
+          min-width: 129px;
+          outline: none;
+          cursor: pointer;
+          overflow: hidden;
+          @include Text($t_decoration:none,$let_spacing:0.3px,$f_weight:700,$f_size:16px,$display:inline-block,$color:$white_color,$b_radius:30px,$padding:8px 31px,$text_ali:center,$back_ground:$gradient);
+        }
+       #navbar{
+        display: none;
+        @media (max-width:1024px) {
+          display: block;
+          
+        }
+        .mobielnav{
+          background-color: $white_color;
+          width: 100%;
+          @include Position($position:absolute,$top:100%,$left:0,$z_index:1111111);
+          .menu{
+            @include Flex($f_direction:column,$a_items:start,$j_content:flex-start);
+            padding: 0;
+            .menu-item{
+            a{
+              opacity: .9;
+              @include Text($width:198vh,$padding:12px 20px,$f_size:16px,$color:$dark_color2,$display:block,$l_hei:24px,$text_transfo:uppercase,$f_weight:700,$t_decoration:none);
+              border-bottom: 1px solid #dfdcdc;
+              font-family: "Chakra Petch", sans-serif;
+            }
+          }
+        }
+        }
+        .close{
+          position: relative;
+          border: none;
+          &::after{
+            content: "";
+            @include Position ($position:absolute,$left:0,$top:7px,);
+            @include Text ($width:30px,$height:3px,$b_radius:3px);
+            background-color: $white_color;
+            transition:  all 0.3s ease-in-out;
+          }
+          &::before{
+            content: "";
+            @include Position ($position:absolute,$left:0,$top:-7px,);
+            @include Text ($width:30px,$height:3px,$b_radius:3px);
+            background-color: $white_color;
+            transition: all 0.3s ease-in-out;
+          }
+         span{
+          background-color: $white_color;
+          @include Text($width:30px,$height:3px,$display:block,$b_radius:3px);
+         }
+        }
+        .open{
+          position: relative;
+          border: none;
+          &::after{
+            content: "";
+            @include Position ($position:absolute,$left:0,$top:7px,);
+            @include Text ($width:30px,$height:3px,$b_radius:3px);
+            background-color: $white_color;
+            transition:  all 0.3s ease-in-out;
+            transform: rotate(-45deg) translate(10px, -10px);
+          }
+          &::before{
+            content: "";
+            @include Position ($position:absolute,$left:0,$top:-7px,);
+            @include Text ($width:30px,$height:3px,$b_radius:3px);
+            background-color: $white_color;
+            transition: all 0.3s ease-in-out;
+            transform: rotate(45deg);
+          }
+         span{
+          background-color: transparent;
+          @include Text($width:30px,$height:0px,$display:block,$b_radius:3px);
+         }
+        }
+       }
+      }
+    }
+  }
+}
+.nav-active{
+  background-color: $white_color;
+          width: 100%;
+          @include Position($position:absolute,$top:100%,$left:0,$z_index:1111111);
+          .menu{
+            @include Flex($f_direction:column,$a_items:start,$j_content:flex-start);
+            .menu-item{
+            a{
+              opacity: .9;
+              @include Text($padding:12px 20px,$f_size:16px,$color:$dark_color2,$display:block,$l_hei:24px,$text_transfo:uppercase,$f_weight:700,$t_decoration:none);
+              border-bottom: 1px solid #dfdcdc;
+              font-family: "Chakra Petch", sans-serif;
+            }
+          }
+        }
+}

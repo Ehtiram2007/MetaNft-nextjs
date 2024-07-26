@@ -1,0 +1,548 @@
+#art {
+  background-size: cover;
+  min-height: 850px;
+  width: 100%;
+  padding-top: 40px;
+  .container {
+    max-width: 1200px;
+    .text {
+      max-width: 100%;
+      margin-top: 40px;
+      h1 {
+        @include Text($text_ali:left,$f_size:45px,$l_hei:1.2,$mar_bottom:25px,$color:$white_color,$f_weight:700,$text_transfo:capitalize);
+        span {
+          background-image:$gradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      h3 {
+        @include Text($f_size:42px,$l_hei:1.2,$mar_bottom:20px,$color:$white_color,$f_weight:700,$let_spacing:0.6px);
+      }
+      h4 {
+        background-image:$gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include Text($f_size:20px,$f_weight:700,$let_spacing:0.6px,$mar_bottom:8px);
+      }
+      p {
+        @include Text($let_spacing:0.3px,$mar_bottom:50px,$color:$white_color3,$text_ali:left,$l_hei:1.6);
+      }
+
+      .link-buton {
+        display: flex;
+        .explore {
+          font-family: "Montserrat", sans-serif;
+         @include Text($padding:14px 40px,$color:$white_color,$f_size:16px,$f_weight:700,$display:inline-block,$l_hei:24px,$t_decoration:none,$text_ali:center,$let_spacing:0.3px,$back_ground:$gradient,$b_radius:30px);
+          outline: none;
+          cursor: pointer;
+          overflow: hidden;         
+        }
+        .more {
+          padding: 14px 25px;
+          @include Text($mar_left:14px,$back_ground:transparent,$f_size:15px,$color:$white_color4,$t_decoration:none);
+          font-family: "Montserrat", sans-serif;
+        }
+      }
+      .facts {
+        margin-top: 50px;
+        ul {
+          display: flex;
+          padding-left: 0;
+          list-style: none;
+          li {
+            position: relative;
+            margin: 0 25px;
+            .number {
+              background-image:$gradient;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              font-size: 20px;
+              font-family: "Montserrat", sans-serif;
+              margin-bottom: 10px;
+            }
+            span {
+              font-family: "Montserrat", sans-serif;
+              @include Text($f_size:15px,$f_weight:600,$color:$gray_color,$display:block);
+            }
+          }
+        }
+      }
+    }
+  }
+  .img {
+    img {
+      padding-left: 70px;
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+#cart {
+  background-color: $dark_color;
+  padding-top: 70px;
+  .text {
+    h3 {
+      @include Text($mar_bottom:50px,$color:$white_color,$f_size:28px,$f_weight:700,$let_spacing:0.6);
+    }
+  }
+  .nft {
+    padding: 20px;
+    background: $rgba_color;
+    border: 2px solid $rgba_color;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    transform: translateY(5px);
+    &:hover {
+      transform: translateY(0px);
+      .nft-thumb {
+        .nft-content {
+          top: 50%;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    .nft-thumb {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      margin-bottom: 20px;
+      .nft-full {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          vertical-align: middle;
+        }
+      }
+      .nft-content {
+        font-family: "Montserrat", sans-serif;
+        border: none;
+        @include Text($f_size:14px,$display:inline-block,$back_ground:$gradient,$f_weight:600,$b_radius:24px,$text_ali:center,$padding:15px 26px);
+        outline: none;
+        cursor: pointer;
+        top: 59%;
+        left: 25%;
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        .place {
+          text-decoration: none;
+          color: $white_color;
+        }
+      }
+    }
+    .nft-text {
+      .nft-titles {
+        margin-bottom: 16px;
+        h3 {
+          @include Text($l_hei:1.2,$f_weight:500,$mar_bottom:0.5rem,$mar_top:0,$f_size:1.75rem);
+          .title-link {
+            text-decoration: none;
+            color: $white_color;
+          }
+        }
+      }
+      .nft-collection {
+        margin-bottom: 15px;
+        display: flex;
+        gap: 50px;
+        .nft-user {
+          display: flex;
+          align-items: center !important;
+          .user-img {
+            margin-right: 12px;
+            img {
+              @include Text($height:44px,$width:44px,$b_radius:15px);
+            }
+          }
+          .user-name {
+            span {
+              @include Text($f_size:13px,$color:$white_color5,$l_hei:21px);
+            }
+            h4 {
+              @include Text($f_size:14px,$color:$white_color,$l_hei:22px);
+            }
+          }
+        }
+        .nft-price {
+          span {
+            @include Text($f_size:13px,$color:$white_color5,$l_hei:21px);
+          }
+          h4 {
+            @include Text($f_size:14px,$color:$white_color,$l_hei:22px);
+          }
+        }
+      }
+    }
+  }
+}
+#nft {
+  background-size: cover;
+  min-height: 850px;
+  width: 100%;
+  padding-top: 70px;
+  .container {
+    max-width: 1200px;
+    .text {
+      margin-top: 40px;
+      h3 {
+      @include Text($f_size:42px,$l_hei:1.2,$mar_bottom:20px,$color:$white_color,$f_weight:700,$let_spacing:0.6px);
+      }
+      h4 {
+        background-image:$gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    @include Text($f_size:20px,$f_weight:700,$let_spacing:0.6px,$mar_bottom:8px);
+      }
+      p {
+     @include Text($let_spacing:0.3px,$mar_bottom:50px,$color:$white_color3,$text_ali:left,$l_hei:1.6);
+      }
+      .link-buton {
+        display: flex;
+        .explore {
+          font-family: "Montserrat", sans-serif;
+          background:$gradient;
+         @include Text($color:$white_color,$f_size:16px,$f_weight:700,$display:inline-block,$l_hei:24px,$t_decoration:none,$text_ali:center,$let_spacing:0.3px);
+          padding: 14px 40px;
+          border-radius: 30px;
+          outline: none;
+          cursor: pointer;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .img {
+    img {
+      padding-left: 70px;
+      width: 100%;
+    }
+  }
+}
+#MapRoad {
+  background-color: $dark_color;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  .container {
+    max-width: 1140px;
+    h3 {
+      @include Text($f_size:28px,$f_weight:700,$let_spacing:8px,$color:$white_color,$mar_bottom:50px);
+    }
+    .MapRoad-items {
+      position: relative;
+      @include Flex($j_content:space-between,$a_items:center,$f_wrap:wrap);
+      @include Text($padding:0 40px,$mar_top:30px,$mar_right:auto,$mar_left:auto,$width:100%);
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+        padding: 0;
+      }
+      &::before {
+        @media (max-width: 768px) {
+          left: 0;
+          height: 100%;
+        }
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 5px;
+        height: 108%;
+        top: 0;
+        transform: translateX(-50%);
+        background-image:$gradient;
+      }
+      .MapRoad-item {
+        @media (max-width: 768px) {
+          margin-left: 44px;
+          margin-bottom: 30px;
+          padding: 0;
+          width: 100%;
+        }
+        position: relative;
+        width: 48%;
+        padding: 0 40px;
+        margin-bottom: 117px;
+        .MapRoad-iner {
+          background-color: $rgba_color;
+          border: 2px solid $rgba_color;
+          border-radius: 24px;
+          padding: 35px 30px;
+          h4 {
+            @include Text($f_size:20px,$color:$white_color,$f_weight:600,$mar_bottom:15px);
+          }
+          p {
+            @include Text($color:$color_white,$f_weight:400,$l_hei:1.6,$mar_bottom:0);
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          right: 12px;
+          top: 40px;
+          width: 27px;
+          display: block;
+          border: 1px dashed $dark_color5;
+          @media (max-width: 768px) {
+            right: auto;
+            left: -41px;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 6px;
+          top: 36px;
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-image:$gradient;
+          border-radius: 50px;
+          transition:$trasition;
+          animation:$animation;
+          box-shadow: $box_shadow2;
+          @media (max-width: 768px) {
+            right: auto;
+            left: -15px;
+          }
+        }
+      }
+      .right {
+        margin-top: 90px;
+        margin-bottom: -130px;
+        @media (max-width: 768px) {
+          margin-top: 0;
+          margin-bottom: 30px;
+        }
+        &::before {
+          position: absolute;
+          right: auto;
+          left: 12px;
+          top: 40px;
+          width: 27px;
+          @media (max-width: 768px) {
+            right: auto;
+            left: -41px;
+          }
+        }
+        &::after {
+          position: absolute;
+          right: auto;
+          left: 6px;
+          top: 36px;
+          width: 10px;
+          height: 10px;
+          background-color:$gradient;
+          @media (max-width: 768px) {
+            right: auto;
+            left: -15px;
+          }
+        }
+      }
+    }
+  }
+  @keyframes pulse {
+    to {
+      box-shadow: $box_shadow;
+    }
+  }
+}
+#back_img {
+  background-color:$dark_color3;
+  background-size: cover;
+  width: 100%;
+  height: 338px;
+  h3 {
+    padding-top: 170px;
+    padding-bottom: 110px;
+    @include Text($text_ali:center,$color:$white_color,$f_weight:700,$mar_bottom:7px);
+  }
+}
+#blog{
+background-color: $dark_color;
+  padding: 100px 0px;
+  .container{
+      max-width: 1140px;
+      .blog_item{
+          position: relative;
+          width: 100%;
+          height: 420px;
+          overflow: hidden;
+          margin-bottom: 30px;
+          border-radius: 24px;
+          img{ 
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .blog-inf{
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              width: 100%;
+              background: rgba(5, 9, 44, .15);
+              border: 1px solid rgba(5, 9, 44, 0.04);
+              backdrop-filter: blur(14px);
+              padding: 30px;
+              .content{
+                  span{
+                      @include Text($f_size:15px,$f_weight:600,$l_hei:1.2,$mar_bottom:7px,$color:$white_color3);
+                  }
+                  h3{
+                      margin-bottom: 15px;
+                      a{
+                          @include Text($t_decoration:none,$f_size:22px,$f_weight:700,$color:$white_color,$l_hei:1.2,$let_spacing:3px);
+                          transition: all .4s ease;
+                          &:hover{
+                            background-image:$gradient;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            font-weight: 700; 
+                            
+                          }
+                      }
+                  }
+              }
+              .user-content{
+                  display: flex;
+                  span{
+                    @include Text($color:$white_color,$f_size:15px,$f_weight:700,$l_hei:1.2);
+                  }
+                  img{
+                      @include Text($width:50px,$height:50px,$b_radius:50%,$mar_right:10px);
+                  }
+                  p{
+                    @include Text($color:$white_color3,$f_size:13px,$f_weight:600,$l_hei:1.2);
+                  }
+              }
+          }
+      }
+  }
+}
+#blogid{
+  background-color: $dark_color ;
+  padding: 100px 0px;
+  .blog-item{
+      .img{
+          border-radius: 24px 24px 0 0;
+          width: 100%;
+          height: 463px;
+          overflow: hidden;
+          img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+          }
+      }
+      .blog-text{
+          padding: 20px;
+          border-radius: 0 0 24px 24px;
+          border: 1px solid #181f3c;
+          .post-text{
+              margin-bottom: 30px;
+              p{
+                background-image:$gradient ;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                  @include Text($f_weight:700,$f_size:15px,$l_hei:1.2,$mar_bottom:7px);
+              }
+              a{
+                  font-family: 'Michroma', sans-serif;
+                  transition: all 0.3s ease-in-out;
+                  @include Text($t_decoration:none,$color:$white_color,$f_size:22px,$f_weight:700,$l_hei:1.2,$let_spacing:3px,$mar_bottom:15px);
+                  &:hover{
+                    background-image:$gradient ;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 700;
+                    
+                  }
+              }
+          }
+          .info{
+              img{
+                  @include Text($b_radius:50%,$width:40px,$height:40px);
+              }
+              .info-content{
+                  margin-left: 10px;
+                  a{
+                    @include Text($color:$white_color,$f_size:15px,$f_weight:700,$l_hei:1.2,$t_decoration:none);
+                  }
+                  p{  
+                    @include Text($f_size:13px,$f_weight:500,$color:$white_color3);
+                  }
+              }
+          }
+          .p-text{
+              margin-top: 20px;
+              p{
+                  @include Text($color:$white_color6,$f_size:16px,$f_weight:500,$l_hei:1.6);
+              }
+          }
+      }
+  }
+}
+#sidebar{
+  .sidebar-title{
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      @include Text($mar_bottom:25px,$padding:30px,$b_radius:24px,$back_ground:$rgba_color);
+      h3{
+          @include Text($f_size:18px,$f_weight:600,$mar_bottom:30px,$color:$white_color);
+      }
+      .input-search{
+          position: relative;
+          input{
+              border: 1px solid #27354e;
+              @include Text($padding:13px 25px,$width:100%,$color:$white_color,$f_size:15px,$b_radius:24px,$back_ground:transparent);
+              &::placeholder{ color: $white_color; }
+          }
+          .search-icon{
+              position: absolute;
+              top: 5px;
+              right: 5px;
+              @include Text($width:40px,$height:40px,$b_radius:24px,$back_ground:$gradient,$text_ali:center,$color:$white_color,$l_hei:40px);
+              cursor: pointer;
+          }
+      }
+      .sidebar-content{
+          ul{
+              margin: 0;
+              padding: 0;
+              li{
+                  a{
+                      @include Text($display:block,$color:$white_color,$f_size:15px,$f_weight:400,$t_decoration:none,$padding:15px 0,$pad_left:13px);
+                      border-bottom: 1px solid #233048;
+                      transition: all .3s ease-in-out;
+                      &:hover{
+                        background-image:$gradient ;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-weight: 700;
+                      
+                      }
+                      span{
+                          color: $white_color;
+                          position: absolute;
+                          top: 30%;
+                          right: 9px;
+                      }
+                  }
+              }
+          }
+      }
+      .tagcloud{
+          a{
+            @include Text($f_size:14px,$t_decoration:none,$color:#e1dede,$display:inline-block,$mar_bottom:8px,$b_radius:24px,$padding:8px 20px,$mar_right:5px);
+              border: 1px solid #27354e;
+              transition: all 0.3s ease-in-out;
+              &:hover{ background:$gradient; }
+          }
+      }
+  }
+}
